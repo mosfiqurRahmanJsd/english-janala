@@ -14,10 +14,90 @@
         href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tiro+Bangla:ital@0;1&display=swap"
         rel="stylesheet">
 
+    <!-- font awesome cdn -->
+    <script src="https://kit.fontawesome.com/2dd9b3fb0a.js" crossorigin="anonymous"></script>
+
+    <!-- daisy ui and tailwind cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+
+    <!-- custom styles -->
+    <style type="text/tailwindcss">
+        @theme {
+        /* font family */
+        --font-tiro-bangla: "Tiro Bangla", serif;
+        --font-hind-siliguri: "Hind Siliguri", sans-serif;
+        --font-poppins: "Poppins", sans-serif;
+
+        
+
+        /* --breakpoint-3xl: 120rem;
+        --color-avocado-100: oklch(0.99 0 0);
+        --color-avocado-200: oklch(0.98 0.04 113.22);
+        --color-avocado-300: oklch(0.94 0.11 115.03);
+        --color-avocado-400: oklch(0.92 0.19 114.08);
+        --color-avocado-500: oklch(0.84 0.18 117.33);
+        --color-avocado-600: oklch(0.53 0.12 118.34);
+        --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
+        --ease-snappy: cubic-bezier(0.2, 0, 0, 1); */
+    }
+
+    </style>
+
+
+    <link rel="stylesheet" href="./input.css">
+
 </head>
 
 <body>
-    
+    <header>
+        <!-- this is out navigation -->
+        <nav>
+            <div
+                class="bg-gradient-to-r from-[#ffffff40] from-10% via-[#00000040] via-50% to-[#ffffff40] to-90%  border-b border-[#c6bdbd] py-1">
+                <div class="container navbar mx-auto">
+                    <div class="flex-1">
+                        <a class="flex items-center">
+                            <p class="text-xl font-semibold font-poppins">English</p>
+                            <img src="./assets/logo.png" alt="">
+                            <p class="text-xl font-normal font-tiro-bangla">জানালা</p>
+                        </a>
+                    </div>
+                    <div class="flex-none">
+                        <button class="btn btn-outline btn-primary font-poppins font-semibold"><i
+                                class="fa-solid fa-circle-question"></i> FAQ</button>
+                        <button class="btn btn-outline btn-primary font-poppins font-semibold"><i
+                                class="fa-brands fa-leanpub"></i> Learn</button>
+                        <button class="btn btn-outline btn-primary font-poppins font-semibold"><i
+                                class="fa-solid fa-arrow-right-from-bracket"></i> Logout</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- this is our banner section -->
+        <section class="container mx-auto flex items-center justify-between">
+            <div class="w-5/12">
+                <h1 class="font-poppins text-5xl font-bold text-[#18181b] mb-6"><span class="text-[#00bcff]">English</span> is Easy</h1>
+                <p class="text-2xl font-hind-siliguri text-[#18181b] leading-10 mb-7">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের
+                    Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
+
+                <div class="w-6/12">
+                    <input class="px-3.5 py-2.5 rounded border-[#D1D1D1] w-full mb-5" type="text" name="" id="" placeholder="Enter your name">
+                    <input class="px-3.5 py-2.5 rounded border-[#D1D1D1] w-full mb-5" type="password" name="" id="" placeholder="Enter the password: 123456">
+                    <button class="btn btn-lg btn-primary">Get Started</button>
+                </div>
+            </div>
+
+            <div class="w-5/12">
+                <img class="w-full" src="./assets/hero-student.png" alt="">
+            </div>
+
+        </section>
+
+
+    </header>
 </body>
 
 </html>
