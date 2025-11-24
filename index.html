@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tiro+Bangla:ital@0;1&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tiro+Bangla:ital@0;1&display=swap"
         rel="stylesheet">
 
     <!-- font awesome cdn -->
@@ -29,6 +29,7 @@
         --font-tiro-bangla: "Tiro Bangla", serif;
         --font-hind-siliguri: "Hind Siliguri", sans-serif;
         --font-poppins: "Poppins", sans-serif;
+        --font-inter: "Inter", sans-serif;
 
         
 
@@ -78,7 +79,7 @@
     </header>
 
     <main class="container mx-auto">
-         <!-- this is our banner section -->
+        <!-- this is our banner section -->
         <section class="container mx-auto flex items-center justify-between">
             <div class="w-5/12">
                 <h1 class="font-poppins text-5xl font-bold text-[#18181b] mb-6"><span
@@ -122,11 +123,51 @@
                 </div>
             </div>
 
-            <!-- lesson showing -->
+            <!-- lesson not select -->
             <div class="bg-[#F8F8F8] py-16 text-center">
                 <p class="font-hind-siliguri text-[#79716B] mb-3.5">আপনি এখনো কোন Lesson Select করেন নি</p>
                 <h2 class="font-hind-siliguri text-4xl font-medium">একটি Lesson Select করুন।</h2>
             </div>
+
+
+            <!-- lesson not found -->
+            <div class="bg-[#F8F8F8] py-16 text-center">
+                <img class="mx-auto" src="./assets/alert-error.png" alt="">
+                <p class="font-hind-siliguri text-[#79716B] mt-4 mb-3.5">এই Lesson এ এখনো কোন Vocabulary যুক্ত করা হয়নি।
+                </p>
+                <h2 class="font-hind-siliguri text-4xl font-medium">নেক্সট Lesson এ যান</h2>
+            </div>
+
+            <!-- lesson not select -->
+            <div class="bg-[#F8F8F8] py-16 text-center">
+                <p class="font-hind-siliguri text-[#79716B] mb-3.5">আপনি এখনো কোন Lesson Select করেন নি</p>
+                <h2 class="font-hind-siliguri text-4xl font-medium">একটি Lesson Select করুন।</h2>
+            </div>
+
+
+            <!-- lesson not select -->
+            <div id="card-container" class="bg-[#F8F8F8] p-7">
+                <div class="bg-white py-14 px-12">
+                    <div class="text-center mb-14">
+                        <h3 class="text-4xl font-bold font-inter mb-6">Eager</h3>
+                        <h5 class="text-xl font-medium font-inter mb-6">Meaning/Pronounciation</h5>
+                        <h2 class="text-4xl font-semibold font-hind-siliguri text-[#464649]"> “আগ্রহী/ইগনোর” </h2>
+                    </div>
+                    <div class="flex justify-between">
+                        <div class="bg-[#E8F4FF] p-4 rounded"><i class="fa-solid fa-circle-info text-2xl "></i></div>
+                        <div class="bg-[#E8F4FF] p-4 rounded"><i class="fa-solid fa-volume-high text-2xl"></i></div>
+                        
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+
+
+
         </section>
 
 
