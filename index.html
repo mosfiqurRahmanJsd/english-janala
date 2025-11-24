@@ -156,9 +156,39 @@
                     <div class="flex justify-between">
                         <div class="bg-[#E8F4FF] p-4 rounded"><i class="fa-solid fa-circle-info text-2xl "></i></div>
                         <div class="bg-[#E8F4FF] p-4 rounded"><i class="fa-solid fa-volume-high text-2xl"></i></div>
-                        
+
                     </div>
                 </div>
+
+
+                <!-- modal -->
+                <!-- Open the modal using ID.showModal() method -->
+                <button class="btn" onclick="my_modal_5.showModal()">open modal</button>
+                <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                    <div class="modal-box max-w-xl">
+                        <div class="border-2 border-[#EDF7FF] p-6 rounded-xl">
+                            <h3 class="font-poppins text-4xl font-semibold mb-8">Eager ( :ইগার)</h3>
+                            <h4 class="font-medium text-2xl font-poppins mb-2.5">Meaning</h4>
+                            <h4 class="font-hind-siliguri font-medium text-2xl mb-8">আগ্রহী</h4>
+                            <h4 class="font-poppind text-2xl font-semibold mb-2.5">Example</h4>
+                            <p class="text-[#333333] text-2xl font-normal mb-8">The kids were eager to open their gifts.</p>
+                            <h4 class="font-hind-siliguri text-2xl font-medium mb-2.5">সমর্থক শব্দগুলো</h4>
+
+                            <div class="flex gap-4">
+                                <p class="px-5 py-2 bg-[#EDF7FF] border-2 border-[#D7E4EF] rounded">Enthusiastic</p>
+                                <p class="px-5 py-2 bg-[#EDF7FF] border-2 border-[#D7E4EF] rounded">excited</p>
+                                <p class="px-5 py-2 bg-[#EDF7FF] border-2 border-[#D7E4EF] rounded">keen</p>
+                            </div>
+
+                        </div>
+                        <div class="modal-action flex justify-start">
+                            <form method="dialog">
+                                <!-- if there is a button in form, it will close the modal -->
+                                <button class="btn btn-primary px-6 rounded-xl">Complete Learning</button>
+                            </form>
+                        </div>
+                    </div>
+                </dialog>
 
 
             </div>
