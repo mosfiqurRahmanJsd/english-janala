@@ -51,7 +51,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="mb-24">
         <!-- this is out navigation -->
         <nav class="sticky top-0">
             <div
@@ -79,13 +79,17 @@
         <!-- this is our banner section -->
         <section class="container mx-auto flex items-center justify-between">
             <div class="w-5/12">
-                <h1 class="font-poppins text-5xl font-bold text-[#18181b] mb-6"><span class="text-[#00bcff]">English</span> is Easy</h1>
-                <p class="text-2xl font-hind-siliguri text-[#18181b] leading-10 mb-7">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের
+                <h1 class="font-poppins text-5xl font-bold text-[#18181b] mb-6"><span
+                        class="text-[#00bcff]">English</span> is Easy</h1>
+                <p class="text-2xl font-hind-siliguri text-[#18181b] leading-10 mb-7">আজ থেকেই আপনার ভাষা শেখার যাত্রা
+                    শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের
                     Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
 
                 <div class="w-6/12">
-                    <input class="px-3.5 py-2.5 rounded border-[#D1D1D1] w-full mb-5" type="text" name="" id="" placeholder="Enter your name">
-                    <input class="px-3.5 py-2.5 rounded border-[#D1D1D1] w-full mb-5" type="password" name="" id="" placeholder="Enter the password: 123456">
+                    <input class="px-3.5 py-2.5 rounded border-[#D1D1D1] w-full mb-5" type="text" name="" id=""
+                        placeholder="Enter your name">
+                    <input class="px-3.5 py-2.5 rounded border-[#D1D1D1] w-full mb-5" type="password" name="" id=""
+                        placeholder="Enter the password: 123456">
                     <button class="btn btn-md btn-primary">Get Started</button>
                 </div>
             </div>
@@ -95,9 +99,83 @@
             </div>
 
         </section>
-
-
     </header>
+
+    <main class="container mx-auto">
+        <section class="mb-52">
+
+            <!-- lesson button -->
+            <div class="text-center">
+                <h1 class="font-poppins text-4xl font-bold text-[#18181b] mb-6"><span
+                        class="text-[#00bcff]">Let's</span> Learn Vocabularies</h1>
+                <div class="py-9">
+                    <button class="btn btn-outline mx-2 btn-primary font-poppins font-semibold"><i
+                            class="fa-brands fa-leanpub"></i> Lesson - 1</button>
+                    <button class="btn btn-outline mx-2 btn-primary font-poppins font-semibold"><i
+                            class="fa-brands fa-leanpub"></i> Learn</button>
+
+                </div>
+            </div>
+
+            <!-- lesson showing -->
+            <div class="bg-[#F8F8F8] py-16 text-center">
+                <p class="font-hind-siliguri text-[#79716B] mb-3.5">আপনি এখনো কোন Lesson Select করেন নি</p>
+                <h2 class="font-hind-siliguri text-4xl font-medium">একটি Lesson Select করুন।</h2>
+            </div>
+        </section>
+
+
+
+        <section class="pb-52 ">
+            <h1 class="font-poppins text-4xl font-bold text-[#18181b] mb-16 text-center"><span
+                    class="text-[#00bcff]">Frequently</span> Asked Questions</h1>
+
+            <!-- Accordion -->
+            <div>
+                <div class="collapse collapse-plus bg-[#F8F8F8] mb-5">
+                    <input type="radio" name="my-accordion-3" checked="checked" />
+                    <div class="collapse-title font-semibold">How do I create an account?</div>
+                    <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow
+                        the registration process.</div>
+                </div>
+                <div class="collapse collapse-plus bg-[#F8F8F8] mb-5">
+                    <input type="radio" name="my-accordion-3" />
+                    <div class="collapse-title font-semibold">I forgot my password. What should I do?</div>
+                    <div class="collapse-content text-sm">Click on "Forgot Password" on the login page and follow the
+                        instructions sent to your email.</div>
+                </div>
+                <div class="collapse collapse-plus bg-[#F8F8F8] mb-5">
+                    <input type="radio" name="my-accordion-3" />
+                    <div class="collapse-title font-semibold">How do I update my profile information?</div>
+                    <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make
+                        changes.</div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <!-- this is our footer -->
+    <footer class="border-t-3 py-24 border-[#FFEBEB]">
+        <div class="container mx-auto flex justify-between">
+            <div>
+                <a class="flex items-center">
+                    <p class="text-xl font-semibold font-poppins">English</p>
+                    <img src="./assets/logo.png" alt="">
+                    <p class="text-xl font-normal font-tiro-bangla">জানালা</p>
+                </a>
+                <p class="font-hind-siliguri mt-5 mb-2">ইংরেজি শিখুন সহজে</p>
+                <p class="font-hind-siliguri">Providing Safin-It Applications since 2025</p>
+            </div>
+            <div>
+                <p class="text-[#747476] font-semibold mb-5">FOLLOW US</p>
+                <ul class="flex gap-4">
+                    <li><a class="text-3xl" href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a class="text-3xl" href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                    <li><a class="text-3xl" href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
