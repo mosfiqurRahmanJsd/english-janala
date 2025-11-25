@@ -68,8 +68,8 @@
                     <div class="flex-none">
                         <a href="#faq" class="btn btn-outline btn-primary font-poppins font-semibold"><i
                                 class="fa-solid fa-circle-question"></i> FAQ</a>
-                        <button class="btn btn-outline btn-primary font-poppins font-semibold"><i
-                                class="fa-brands fa-leanpub"></i> Learn</button>
+                        <a href="#learn" class="btn btn-outline btn-primary font-poppins font-semibold"><i
+                                class="fa-brands fa-leanpub"></i> Learn</a>
                         <button class="btn btn-outline btn-primary font-poppins font-semibold"><i
                                 class="fa-solid fa-arrow-right-from-bracket"></i> Logout</button>
                     </div>
@@ -111,27 +111,23 @@
         <section class="mb-52">
 
             <!-- lesson button -->
-            <div class="text-center">
+            <div class="text-center pt-24" id="learn">
                 <h1 class="font-poppins text-4xl font-bold text-[#18181b] mb-6"><span
                         class="text-[#00bcff]">Let's</span> Learn Vocabularies</h1>
-                <div class="py-9">
-                    <button class="btn btn-outline mx-2 btn-primary font-poppins font-semibold"><i
-                            class="fa-brands fa-leanpub"></i> Lesson - 1</button>
-                    <button class="btn btn-outline mx-2 btn-primary font-poppins font-semibold"><i
-                            class="fa-brands fa-leanpub"></i> Learn</button>
-
+                <div class="py-9" id="lesson-btn-container">
+                    
                 </div>
             </div>
 
             <!-- lesson not select -->
-            <div class="bg-[#F8F8F8] py-16 text-center">
+            <div id="default-lesson" class="bg-[#F8F8F8] py-16 text-center">
                 <p class="font-hind-siliguri text-[#79716B] mb-3.5">আপনি এখনো কোন Lesson Select করেন নি</p>
                 <h2 class="font-hind-siliguri text-4xl font-medium">একটি Lesson Select করুন।</h2>
             </div>
 
 
             <!-- lesson not found -->
-            <div class="bg-[#F8F8F8] py-16 text-center">
+            <div class="bg-[#F8F8F8] py-16 text-center hidden">
                 <img class="mx-auto" src="./assets/alert-error.png" alt="">
                 <p class="font-hind-siliguri text-[#79716B] mt-4 mb-3.5">এই Lesson এ এখনো কোন Vocabulary যুক্ত করা হয়নি।
                 </p>
@@ -139,14 +135,14 @@
             </div>
 
             <!-- lesson not select -->
-            <div class="bg-[#F8F8F8] py-16 text-center">
+            <!-- <div class="bg-[#F8F8F8] py-16 text-center">
                 <p class="font-hind-siliguri text-[#79716B] mb-3.5">আপনি এখনো কোন Lesson Select করেন নি</p>
                 <h2 class="font-hind-siliguri text-4xl font-medium">একটি Lesson Select করুন।</h2>
-            </div>
+            </div> -->
 
 
             <!-- lesson not select -->
-            <div id="card-container" class="bg-[#F8F8F8] p-7">
+            <div id="card-container" class="bg-[#F8F8F8] p-7 hidden">
                 <div class="bg-white py-14 px-12">
                     <div class="text-center mb-14">
                         <h3 class="text-4xl font-bold font-inter mb-6">Eager</h3>
@@ -160,10 +156,10 @@
                     </div>
                 </div>
 
-
+                
                 <!-- modal -->
                 <!-- Open the modal using ID.showModal() method -->
-                <button class="btn" onclick="my_modal_5.showModal()">open modal</button>
+       <!----       <button class="btn" onclick="my_modal_5.showModal()">open modal</button>
                 <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
                     <div class="modal-box max-w-xl">
                         <div class="border-2 border-[#EDF7FF] p-6 rounded-xl">
@@ -183,12 +179,15 @@
                         </div>
                         <div class="modal-action flex justify-start">
                             <form method="dialog">
-                                <!-- if there is a button in form, it will close the modal -->
+                                <!-- if there is a button in form, it will close the modal 
                                 <button class="btn btn-primary px-6 rounded-xl">Complete Learning</button>
                             </form>
                         </div>
                     </div>
                 </dialog>
+
+            
+                -->
 
 
             </div>
@@ -271,6 +270,9 @@ Use filter() when you need to select elements based on a condition and create a 
             </div>
         </div>
     </footer>
+
+
+    <script src="./scripts/app.js"></script>
 </body>
 
 </html>
