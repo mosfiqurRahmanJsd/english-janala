@@ -30,7 +30,7 @@
         --font-hind-siliguri: "Hind Siliguri", sans-serif;
         --font-poppins: "Poppins", sans-serif;
         --font-inter: "Inter", sans-serif;
-
+        
         
 
         /* --breakpoint-3xl: 120rem;
@@ -46,13 +46,22 @@
 
     </style>
 
+    <style>
+        .active {
+            background-color: #3C26C5;
+            color: white;
+        }
+    </style>
+
+    
+
 
     <link rel="stylesheet" href="./input.css">
 
 </head>
 
 <body>
-    <header class=" sticky top-0 z-10" >
+    <header class=" sticky top-0 z-10">
         <!-- this is out navigation -->
         <nav>
             <div
@@ -78,7 +87,7 @@
         </nav>
     </header>
 
-    <main class="container mx-auto" >
+    <main class="container mx-auto">
         <!-- this is our banner section -->
         <section class="container mx-auto flex items-center justify-between pb-51">
             <div class="w-5/12">
@@ -115,7 +124,7 @@
                 <h1 class="font-poppins text-4xl font-bold text-[#18181b] mb-6"><span
                         class="text-[#00bcff]">Let's</span> Learn Vocabularies</h1>
                 <div class="py-9" id="lesson-btn-container">
-                    
+
                 </div>
             </div>
 
@@ -127,39 +136,23 @@
 
 
             <!-- lesson not found -->
-            <div class="bg-[#F8F8F8] py-16 text-center hidden">
+            <div id="lesson-not-found" class="bg-[#F8F8F8] py-16 text-center hidden">
                 <img class="mx-auto" src="./assets/alert-error.png" alt="">
                 <p class="font-hind-siliguri text-[#79716B] mt-4 mb-3.5">এই Lesson এ এখনো কোন Vocabulary যুক্ত করা হয়নি।
                 </p>
                 <h2 class="font-hind-siliguri text-4xl font-medium">নেক্সট Lesson এ যান</h2>
             </div>
 
-            <!-- lesson not select -->
-            <!-- <div class="bg-[#F8F8F8] py-16 text-center">
-                <p class="font-hind-siliguri text-[#79716B] mb-3.5">আপনি এখনো কোন Lesson Select করেন নি</p>
-                <h2 class="font-hind-siliguri text-4xl font-medium">একটি Lesson Select করুন।</h2>
-            </div> -->
 
 
-            <!-- lesson not select -->
-            <div id="card-container" class="bg-[#F8F8F8] p-7 hidden">
-                <div class="bg-white py-14 px-12">
-                    <div class="text-center mb-14">
-                        <h3 class="text-4xl font-bold font-inter mb-6">Eager</h3>
-                        <h5 class="text-xl font-medium font-inter mb-6">Meaning/Pronounciation</h5>
-                        <h2 class="text-4xl font-semibold font-hind-siliguri text-[#464649]"> “আগ্রহী/ইগনোর” </h2>
-                    </div>
-                    <div class="flex justify-between">
-                        <div class="bg-[#E8F4FF] p-4 rounded"><i class="fa-solid fa-circle-info text-2xl "></i></div>
-                        <div class="bg-[#E8F4FF] p-4 rounded"><i class="fa-solid fa-volume-high text-2xl"></i></div>
+            <!-- lesson show -->
+            <div id="card-container" class="bg-[#F8F8F8] grid grid-cols-3 gap-7 p-7">
 
-                    </div>
-                </div>
+            </div>
 
-                
-                <!-- modal -->
-                <!-- Open the modal using ID.showModal() method -->
-       <!----       <button class="btn" onclick="my_modal_5.showModal()">open modal</button>
+            <!-- modal -->
+            <!-- Open the modal using ID.showModal() method -->
+            <!----       <button class="btn" onclick="my_modal_5.showModal()">open modal</button>
                 <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
                     <div class="modal-box max-w-xl">
                         <div class="border-2 border-[#EDF7FF] p-6 rounded-xl">
@@ -190,7 +183,7 @@
                 -->
 
 
-            </div>
+
 
 
 
@@ -209,40 +202,68 @@
             <div class="z-30">
                 <div class="collapse collapse-plus bg-[#F8F8F8] mb-5">
                     <input type="radio" name="my-accordion-3" checked="checked" />
-                    <div class="collapse-title font-semibold">1. What is the difference between var, let and const ?</div>
-                    <div class="collapse-content text-sm">Ths main difference between var, let and const is there scope and reassignment/redeclaration rules. var is function scope and hoisted, while let and const have block scope and are not hoisted to the same extent. const variable cannot be reassigned, whereas let can be reassigned but not redeclared, and var can be both reassigned and redeclared.</div>
+                    <div class="collapse-title font-semibold">1. What is the difference between var, let and const ?
+                    </div>
+                    <div class="collapse-content text-sm">Ths main difference between var, let and const is there scope
+                        and reassignment/redeclaration rules. var is function scope and hoisted, while let and const
+                        have block scope and are not hoisted to the same extent. const variable cannot be reassigned,
+                        whereas let can be reassigned but not redeclared, and var can be both reassigned and redeclared.
+                    </div>
                 </div>
                 <div class="collapse collapse-plus bg-[#F8F8F8] mb-5">
                     <input type="radio" name="my-accordion-3" />
-                    <div class="collapse-title font-semibold">2. What is the difference between map(), forEach() and filter() ?</div>
-                    <div class="collapse-content text-sm">map(), forEach(), and filter() are array iteration methods in JavaScript, each serving a distinct purpose:
-forEach():
-Purpose: To execute a provided function once for each array element.
-Return Value: undefined. It does not create a new array or modify the original array unless explicitly done within the callback function.
-Use Case: When you need to perform an action for each element, such as logging values, updating a database, or triggering side effects, without needing a new array as a result. map():
-Purpose: To create a new array by applying a provided function to each element of the original array.
-Return Value: A new array of the same length as the original, containing the results of calling the provided function on every element. The original array remains unchanged.
-Use Case: When you need to transform each element of an array into a new value and collect these transformed values into a new array.filter():
-Purpose: To create a new array containing only the elements that satisfy a provided test function.
-Return Value: A new array containing only the elements for which the provided callback function returns true. The original array remains unchanged.
-Use Case: When you need to select a subset of elements from an array based on a specific condition.Use forEach() for side effects or when you don't need a new array.
-Use map() when you need to transform each element and create a new array of transformed values.
-Use filter() when you need to select elements based on a condition and create a new array containing only those selected elements.</div>
+                    <div class="collapse-title font-semibold">2. What is the difference between map(), forEach() and
+                        filter() ?</div>
+                    <div class="collapse-content text-sm">map(), forEach(), and filter() are array iteration methods in
+                        JavaScript, each serving a distinct purpose:
+                        forEach():
+                        Purpose: To execute a provided function once for each array element.
+                        Return Value: undefined. It does not create a new array or modify the original array unless
+                        explicitly done within the callback function.
+                        Use Case: When you need to perform an action for each element, such as logging values, updating
+                        a database, or triggering side effects, without needing a new array as a result. map():
+                        Purpose: To create a new array by applying a provided function to each element of the original
+                        array.
+                        Return Value: A new array of the same length as the original, containing the results of calling
+                        the provided function on every element. The original array remains unchanged.
+                        Use Case: When you need to transform each element of an array into a new value and collect these
+                        transformed values into a new array.filter():
+                        Purpose: To create a new array containing only the elements that satisfy a provided test
+                        function.
+                        Return Value: A new array containing only the elements for which the provided callback function
+                        returns true. The original array remains unchanged.
+                        Use Case: When you need to select a subset of elements from an array based on a specific
+                        condition.Use forEach() for side effects or when you don't need a new array.
+                        Use map() when you need to transform each element and create a new array of transformed values.
+                        Use filter() when you need to select elements based on a condition and create a new array
+                        containing only those selected elements.</div>
                 </div>
                 <div class="collapse collapse-plus bg-[#F8F8F8] mb-5">
                     <input type="radio" name="my-accordion-3" />
-                    <div class="collapse-title font-semibold">3. What are arrow functions, and how are the different from regular functions?</div>
-                    <div class="collapse-content text-sm">Arrow functions are a more concise syntax for writing functions introduced in ES6 that differ from regular functions primarily in their handling of this, arguments, and lack of their own prototype. Arrow functions use lexical this, meaning they inherit this from the surrounding code, whereas a regular function's this is determined by how it is called. They also don't have their own arguments object, no prototype property, and cannot be used as constructors. </div>
+                    <div class="collapse-title font-semibold">3. What are arrow functions, and how are the different
+                        from regular functions?</div>
+                    <div class="collapse-content text-sm">Arrow functions are a more concise syntax for writing
+                        functions introduced in ES6 that differ from regular functions primarily in their handling of
+                        this, arguments, and lack of their own prototype. Arrow functions use lexical this, meaning they
+                        inherit this from the surrounding code, whereas a regular function's this is determined by how
+                        it is called. They also don't have their own arguments object, no prototype property, and cannot
+                        be used as constructors. </div>
                 </div>
                 <div class="collapse collapse-plus bg-[#F8F8F8] mb-5">
                     <input type="radio" name="my-accordion-3" />
                     <div class="collapse-title font-semibold">4. How do JavaScript promise work?</div>
-                    <div class="collapse-content text-sm">JavaScript Promises provide a structured way to handle asynchronous operations, representing the eventual completion (or failure) of an operation and its resulting value. They address the challenges of callback-based asynchronous code, such as "callback hell."</div>
+                    <div class="collapse-content text-sm">JavaScript Promises provide a structured way to handle
+                        asynchronous operations, representing the eventual completion (or failure) of an operation and
+                        its resulting value. They address the challenges of callback-based asynchronous code, such as
+                        "callback hell."</div>
                 </div>
                 <div class="collapse collapse-plus bg-[#F8F8F8] mb-5">
                     <input type="radio" name="my-accordion-3" />
                     <div class="collapse-title font-semibold">5. How does closer work in JavaScript?</div>
-                    <div class="collapse-content text-sm">In JavaScript, a closure is the combination of a function and its surrounding state (its lexical environment). Closures allow an inner function to retain access to variables from its outer scope, even after the outer function has finished executing. </div>
+                    <div class="collapse-content text-sm">In JavaScript, a closure is the combination of a function and
+                        its surrounding state (its lexical environment). Closures allow an inner function to retain
+                        access to variables from its outer scope, even after the outer function has finished executing.
+                    </div>
                 </div>
             </div>
 
