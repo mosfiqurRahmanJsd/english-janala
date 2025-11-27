@@ -7,8 +7,37 @@ const loadLessonBtn = () => {
 }
 
 
+const loadLesson = (id) => {
+
+    fetch(`https://openapi.programming-hero.com/api/level/${id}`)
+        .then(res => res.json())
+        .then(data => {
+            showLesson(data.data)
+            showEmptyLesson(data.data)
+        });
+}
+
+
+
+const loadDetails = (id) => {
+    // const detailsBtn = document.getElementById(id);
+    // detailsBtn.onclick();
+
+    const url = `https://openapi.programming-hero.com/api/word/${id}`
+    fetch(url)
+        .then(res => res.json())
+        .then(data => {
+            showDetails(data.data)
+            
+        })
+ 
+
+}
+
+
+
 const removeActiveClass = () => {
-    const activeClassBtn = document.getElementsByClassName('active'); 
+    const activeClassBtn = document.getElementsByClassName('active');
     for (const btn of activeClassBtn) {
         btn.classList.remove('active')
     }
@@ -16,12 +45,16 @@ const removeActiveClass = () => {
 
 
 
+
+
+
+
 const showLessonBtn = (lessons) => {
     const lessonBtnContainer = document.getElementById('lesson-btn-container');
-    
+
     lessons.forEach(lesson => {
-        
-        
+
+
 
         const lessonDiv = document.createElement('span');
         lessonDiv.innerHTML = `
@@ -33,12 +66,12 @@ const showLessonBtn = (lessons) => {
 }
 
 const showLessonSection = (id) => {
-    removeActiveClass(); 
+    removeActiveClass();
 
     const activeLessonBtn = document.getElementById(id);
     activeLessonBtn.classList.add('active');
 
-    
+
 
     if (id) {
         loadLesson(id);
@@ -51,14 +84,7 @@ const showLessonSection = (id) => {
 }
 
 
-const loadLesson = (id) => {
-    fetch(`https://openapi.programming-hero.com/api/level/${id}`)
-        .then(res => res.json())
-        .then(data => {
-            showLesson(data.data)
-            showEmptyLesson(data.data)
-        });
-}
+
 
 
 const showEmptyLesson = (data) => {
@@ -67,7 +93,7 @@ const showEmptyLesson = (data) => {
 
 
 const showLesson = (lessons) => {
-    
+
     const cardContainer = document.getElementById('card-container')
 
     cardContainer.innerHTML = "";
@@ -84,7 +110,7 @@ const showLesson = (lessons) => {
                 <h2 class="text-4xl font-semibold font-hind-siliguri text-[#464649]"> “${lesson.meaning} / ${lesson.pronunciation}” </h2>
             </div>
             <div class="flex justify-between">
-                <button onclick="lessonDetails('${lesson.id}')" class="bg-[#E8F4FF] p-4 rounded"><i class="fa-solid fa-circle-info text-2xl "></i></button>
+                <button id="${lesson.id}" onclick="loadDetails('${lesson.id}')" class="bg-[#E8F4FF] p-4 rounded"><i class="fa-solid fa-circle-info text-2xl "></i></button>
                 <button class="bg-[#E8F4FF] p-4 rounded"><i class="fa-solid fa-volume-high text-2xl"></i></button>
             </div>
 
@@ -94,6 +120,45 @@ const showLesson = (lessons) => {
     })
 }
 
+
+
+
+const showDetails = (details) => {
+    my_modal_5.showModal()
+    console.log(details.synonyms);
+    const modalDetails = document.getElementById('modal-details');
+    modalDetails.innerHTML = `
+        <div class="border-2 border-[#EDF7FF] p-6 rounded-xl">
+                            <h3 class="font-poppins text-4xl font-semibold mb-8">${details.word} (<i class="fa-solid fa-microphone-lines"></i> : ${details.meaning})</h3>
+                            <h4 class="font-medium text-2xl font-poppins mb-2.5">Meaning</h4>
+                            <h4 class="font-hind-siliguri font-medium text-2xl mb-8">${details.meaning}</h4>
+                            <h4 class="font-poppind text-2xl font-semibold mb-2.5">Example</h4>
+                            <p class="text-[#333333] text-2xl font-normal mb-8">${details.sentence}</p>
+                            <h4 class="font-hind-siliguri text-2xl font-medium mb-2.5">সমর্থক শব্দগুলো</h4>
+
+                            <div class="flex gap-4">.
+                                ${
+                                    details.synonyms.forEach(syn => {
+                                        console.log(syn); 
+                                    })
+                                }
+                            
+                                <p class="px-5 py-2 bg-[#EDF7FF] border-2 border-[#D7E4EF] rounded">Enthusiastic</p>
+                                <p class="px-5 py-2 bg-[#EDF7FF] border-2 border-[#D7E4EF] rounded">excited</p>
+                                <p class="px-5 py-2 bg-[#EDF7FF] border-2 border-[#D7E4EF] rounded">keen</p>
+                            </div>
+
+                        </div>
+                        <div class="modal-action flex justify-start">
+                            <form method="dialog">
+                               
+                                <button class="btn btn-primary px-6 rounded-xl">Complete Learning</button>
+                            </form>
+                        </div>
+
+    `
+
+}
 
 
 
