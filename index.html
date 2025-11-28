@@ -30,18 +30,6 @@
         --font-hind-siliguri: "Hind Siliguri", sans-serif;
         --font-poppins: "Poppins", sans-serif;
         --font-inter: "Inter", sans-serif;
-        
-        
-
-        /* --breakpoint-3xl: 120rem;
-        --color-avocado-100: oklch(0.99 0 0);
-        --color-avocado-200: oklch(0.98 0.04 113.22);
-        --color-avocado-300: oklch(0.94 0.11 115.03);
-        --color-avocado-400: oklch(0.92 0.19 114.08);
-        --color-avocado-500: oklch(0.84 0.18 117.33);
-        --color-avocado-600: oklch(0.53 0.12 118.34);
-        --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
-        --ease-snappy: cubic-bezier(0.2, 0, 0, 1); */
     }
 
     </style>
@@ -61,7 +49,7 @@
 </head>
 
 <body>
-    <header class=" sticky top-0 z-10 hidden">
+    <header id="header" class=" sticky top-0 z-10 hidden">
         <!-- this is out navigation -->
         <nav>
             <div
@@ -75,9 +63,9 @@
                         </a>
                     </div>
                     <div class="flex-none">
-                        <a href="#faq" class="btn btn-outline btn-primary font-poppins font-semibold"><i
+                        <a href="#faq" class="scroll-link btn btn-outline btn-primary font-poppins font-semibold"><i
                                 class="fa-solid fa-circle-question"></i> FAQ</a>
-                        <a href="#learn" class="btn btn-outline btn-primary font-poppins font-semibold"><i
+                        <a href="#learn" class="scroll-link btn btn-outline btn-primary font-poppins font-semibold"><i
                                 class="fa-brands fa-leanpub"></i> Learn</a>
                         <button class="btn btn-outline btn-primary font-poppins font-semibold"><i
                                 class="fa-solid fa-arrow-right-from-bracket"></i> Logout</button>
@@ -89,7 +77,7 @@
 
     <main class="container mx-auto">
         <!-- this is our banner section -->
-        <section class="container mx-auto flex items-center justify-between pb-51">
+        <section class="container mx-auto flex items-center justify-between pb-51" id="banner">
             <div class="w-5/12">
                 <h1 class="font-poppins text-5xl font-bold text-[#18181b] mb-6"><span
                         class="text-[#00bcff]">English</span> is Easy</h1>
@@ -98,7 +86,7 @@
                     Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
 
                 <div class="w-6/12">
-                    <input id="name" class="px-3.5 py-2.5 rounded border-[#D1D1D1] w-full mb-5" type="text" name="" id=""
+                    <input id="user-name" class="px-3.5 py-2.5 rounded border-[#D1D1D1] w-full mb-5" type="text" name="" id=""
                         placeholder="Enter your name">
                     <input id="password" class="px-3.5 py-2.5 rounded border-[#D1D1D1] w-full mb-5" type="password" name="" id=""
                         placeholder="Enter the password: 123456">
@@ -117,7 +105,7 @@
 
 
 
-        <section class="mb-52">
+        <section id="learn" class="mb-52 hidden">
 
             <!-- lesson button -->
             <div class="text-center pt-24" id="learn">
@@ -154,27 +142,7 @@
                 
                 <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
                     <div class="modal-box max-w-xl" id="modal-details">
-                        <!-- <div class="border-2 border-[#EDF7FF] p-6 rounded-xl">
-                            <h3 class="font-poppins text-4xl font-semibold mb-8">Eager ( :ইগার)</h3>
-                            <h4 class="font-medium text-2xl font-poppins mb-2.5">Meaning</h4>
-                            <h4 class="font-hind-siliguri font-medium text-2xl mb-8">আগ্রহী</h4>
-                            <h4 class="font-poppind text-2xl font-semibold mb-2.5">Example</h4>
-                            <p class="text-[#333333] text-2xl font-normal mb-8">The kids were eager to open their gifts.</p>
-                            <h4 class="font-hind-siliguri text-2xl font-medium mb-2.5">সমর্থক শব্দগুলো</h4>
-
-                            <div class="flex gap-4">
-                                <p class="px-5 py-2 bg-[#EDF7FF] border-2 border-[#D7E4EF] rounded">Enthusiastic</p>
-                                <p class="px-5 py-2 bg-[#EDF7FF] border-2 border-[#D7E4EF] rounded">excited</p>
-                                <p class="px-5 py-2 bg-[#EDF7FF] border-2 border-[#D7E4EF] rounded">keen</p>
-                            </div>
-
-                        </div>
-                        <div class="modal-action flex justify-start">
-                            <form method="dialog">
-                               
-                                <button class="btn btn-primary px-6 rounded-xl">Complete Learning</button>
-                            </form>
-                        </div> -->
+                       
                     </div>
                 </dialog>
 
@@ -193,7 +161,7 @@
 
 
 
-        <section class="pb-52 pt-28" id="faq">
+        <section class="pb-52 pt-28 hidden" id="faq">
             <h1 class="font-poppins text-4xl font-bold text-[#18181b] mb-16 text-center"><span
                     class="text-[#00bcff]">Frequently</span> Asked Questions</h1>
 
