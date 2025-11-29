@@ -1,6 +1,8 @@
 
 
 
+
+
 const loadLessonBtn = () => {
     fetch('https://openapi.programming-hero.com/api/levels/all')
         .then(res => res.json())
@@ -37,7 +39,6 @@ const loadDetails = (id) => {
 
 
 
-
 document.getElementById('loginBtn').addEventListener('click', function () {
     const userName = document.getElementById('user-name').value;
     const password = document.getElementById('password').value;
@@ -47,6 +48,11 @@ document.getElementById('loginBtn').addEventListener('click', function () {
     } else if (password !== "123456") {
         alert('Wrong password. Please contact admin to get Your Login Code')
     } else {
+        Swal.fire({
+            title: "অভিনন্দন",
+            text: "চলুন আজ নতুন কিছু শেখা যাক",
+            icon: "success"
+        });
         document.getElementById('header').classList.remove('hidden');
         document.getElementById('learn').classList.remove('hidden');
         document.getElementById('faq').classList.remove('hidden');
@@ -54,6 +60,8 @@ document.getElementById('loginBtn').addEventListener('click', function () {
 
     }
 })
+
+
 
 
 const removeActiveClass = () => {
@@ -73,9 +81,6 @@ document.querySelectorAll('a.scroll-link').forEach(link => {
         })
     })
 })
-
-
-
 
 
 
@@ -200,9 +205,9 @@ const showDetails = (details) => {
 // listen this word
 
 function pronounceWord(word) {
-    const utterance = new SpeechSynthesisUtterance(word); 
-    utterance.lang = 'en-EN'; 
-    window.speechSynthesis.speak(utterance); 
+    const utterance = new SpeechSynthesisUtterance(word);
+    utterance.lang = 'en-EN';
+    window.speechSynthesis.speak(utterance);
 }
 
 

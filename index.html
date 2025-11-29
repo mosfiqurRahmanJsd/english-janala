@@ -22,6 +22,12 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
 
+    <!-- sweet alert cdn -->
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+
+
     <!-- custom styles -->
     <style type="text/tailwindcss">
         @theme {
@@ -41,7 +47,7 @@
         }
     </style>
 
-    
+
 
 
     <link rel="stylesheet" href="./input.css">
@@ -86,10 +92,10 @@
                     Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
 
                 <div class="w-6/12">
-                    <input id="user-name" class="px-3.5 py-2.5 rounded border-[#D1D1D1] w-full mb-5" type="text" name="" id=""
-                        placeholder="Enter your name">
-                    <input id="password" class="px-3.5 py-2.5 rounded border-[#D1D1D1] w-full mb-5" type="password" name="" id=""
-                        placeholder="Enter the password: 123456">
+                    <input id="user-name" class="px-3.5 py-2.5 rounded border-[#D1D1D1] w-full mb-5" type="text" name=""
+                        id="" placeholder="Enter your name">
+                    <input id="password" class="px-3.5 py-2.5 rounded border-[#D1D1D1] w-full mb-5" type="password"
+                        name="" id="" placeholder="Enter the password: 123456">
                     <button id="loginBtn" class="btn btn-md btn-primary">Get Started</button>
                 </div>
             </div>
@@ -123,6 +129,28 @@
             </div>
 
 
+
+
+
+
+            <!-- lesson show -->
+            <div class="flex justify-center pt-20"><span id="loading-bar"
+                    class="loading loading-bars loading-xl mx-auto col-span-3 hidden"></span></div>
+            <div id="card-container" class="bg-[#F8F8F8] grid grid-cols-3 gap-7 p-7 hidden">
+
+            </div>
+
+
+
+            <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                <div class="modal-box max-w-xl" id="modal-details">
+
+                </div>
+            </dialog>
+
+
+
+
             <!-- lesson not found -->
             <div id="lesson-not-found" class="bg-[#F8F8F8] py-16 text-center hidden">
                 <img class="mx-auto" src="./assets/alert-error.png" alt="">
@@ -130,27 +158,6 @@
                 </p>
                 <h2 class="font-hind-siliguri text-4xl font-medium">নেক্সট Lesson এ যান</h2>
             </div>
-
-
-
-            <!-- lesson show -->
-             <div class="flex justify-center pt-20"><span id="loading-bar" class="loading loading-bars loading-xl mx-auto col-span-3 hidden"></span></div>
-            <div id="card-container" class="bg-[#F8F8F8] grid grid-cols-3 gap-7 p-7 hidden">
-                
-            </div>
-
-        
-                
-                <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
-                    <div class="modal-box max-w-xl" id="modal-details">
-                       
-                    </div>
-                </dialog>
-
-            
-                
-
-
 
 
 
@@ -260,7 +267,7 @@
         </div>
     </footer>
 
-
+    
     <script src="./scripts/app.js"></script>
 </body>
 
