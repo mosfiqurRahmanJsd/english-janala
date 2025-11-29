@@ -64,6 +64,7 @@ document.getElementById('loginBtn').addEventListener('click', function () {
 
 
 
+
 const removeActiveClass = () => {
     const activeClassBtn = document.getElementsByClassName('active');
     for (const btn of activeClassBtn) {
@@ -81,6 +82,9 @@ document.querySelectorAll('a.scroll-link').forEach(link => {
         })
     })
 })
+
+
+
 
 
 
@@ -130,17 +134,23 @@ const showEmptyLesson = (data) => {
     document.getElementById('loading-bar').classList.add('hidden');
 }
 
+// listen this word
+function pronounceWord(word) {
+    const utterance = new SpeechSynthesisUtterance(word);
+    utterance.lang = 'en-EN';
+    window.speechSynthesis.speak(utterance);
+    console.log('lesson')
+}
+
 
 const showLesson = (lessons) => {
 
     const cardContainer = document.getElementById('card-container')
     cardContainer.classList.remove('hidden');
-    console.log(lessons);
 
     cardContainer.innerHTML = "";
 
     lessons.forEach(lesson => {
-        // console.log(lesson); 
         const div = document.createElement('div');
         div.classList.add('py-14')
         div.classList.add('px-12')
@@ -162,6 +172,8 @@ const showLesson = (lessons) => {
         document.getElementById('loading-bar').classList.add('hidden');
     })
 }
+
+
 
 
 
@@ -202,13 +214,6 @@ const showDetails = (details) => {
 }
 
 
-// listen this word
-
-function pronounceWord(word) {
-    const utterance = new SpeechSynthesisUtterance(word);
-    utterance.lang = 'en-EN';
-    window.speechSynthesis.speak(utterance);
-}
 
 
 
