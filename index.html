@@ -56,19 +56,19 @@
                 class="bg-gradient-to-r from-[#ffffff40] from-10% via-[#00000040] via-50% to-[#ffffff40] to-90%  border-b border-[#c6bdbd] py-1">
                 <div class="container navbar mx-auto">
                     <div class="flex-1">
-                        <a href="/" class="flex items-center">
+                        <div class="flex items-center">
                             <p class="text-xl font-semibold font-poppins">English</p>
                             <img src="./assets/logo.png" alt="">
                             <p class="text-xl font-normal font-tiro-bangla">জানালা</p>
-                        </a>
+                        </div>
                     </div>
                     <div class="flex-none">
                         <a href="#faq" class="scroll-link btn btn-outline btn-primary font-poppins font-semibold"><i
                                 class="fa-solid fa-circle-question"></i> FAQ</a>
                         <a href="#learn" class="scroll-link btn btn-outline btn-primary font-poppins font-semibold"><i
                                 class="fa-brands fa-leanpub"></i> Learn</a>
-                        <button class="btn btn-outline btn-primary font-poppins font-semibold"><i
-                                class="fa-solid fa-arrow-right-from-bracket"></i> Logout</button>
+                        <a href="/" class="btn btn-outline btn-primary font-poppins font-semibold"><i
+                                class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
                     </div>
                 </div>
             </div>
@@ -134,8 +134,9 @@
 
 
             <!-- lesson show -->
-            <div id="card-container" class="bg-[#F8F8F8] grid grid-cols-3 gap-7 p-7">
-
+             <div class="flex justify-center pt-20"><span id="loading-bar" class="loading loading-bars loading-xl mx-auto col-span-3 hidden"></span></div>
+            <div id="card-container" class="bg-[#F8F8F8] grid grid-cols-3 gap-7 p-7 hidden">
+                
             </div>
 
         
